@@ -23,8 +23,8 @@ public class Book {
     @Column(name = "price")
     private int price;
 
-    @Column(name = "writer_id")
-    private Long writerID;
+    @Column(name = "sellerCompany_id")
+    private Long sellerCompanyId;
 
 
 
@@ -62,11 +62,11 @@ public class Book {
         this.price = price;
     }
 
-    public Long getWriterID() {
-        return writerID;
+    public Long getSellerCompanyId() {
+        return sellerCompanyId;
     }
 
-    public void setWriterID(Long writerID) {
-        this.writerID = writerID;
+    public void setSellerCompanyId(Long sellerCompanyId) {
+        this.sellerCompanyId = sellerCompanyId;
     }
 }

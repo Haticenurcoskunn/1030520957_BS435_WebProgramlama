@@ -54,21 +54,21 @@ public class SelectTest {
         book.setPrice(40);
         book.setName("Satranç");
         book.setCategory("Kurgu");
-        book.setWriterID(2L);
+        book.setSellerCompanyId(2L);
 
         boolean persisted = persistInATransaction(book);
         assertTrue(persisted);
     }
 
     @Test
-    public void selectWriter() {
+    public void selectSellerCompany() {
 
-        Writer writer = new Writer();
-        writer.setId(2L);
-        writer.setName("Stefan Zweig");
-        writer.setCustomerId(2L);
+        SellerCompany sellerCompany= new SellerCompany();
+        sellerCompany.setId(2L);
+        sellerCompany.setName("Stefan Zweig");
+        sellerCompany.setCustomerId(2L);
 
-        boolean persisted = persistInATransaction(writer);
+        boolean persisted = persistInATransaction(sellerCompany);
         assertTrue(persisted);
     }
 
@@ -78,7 +78,6 @@ public class SelectTest {
         Customer customer = new Customer();
         customer.setCustomerId(2L);
         customer.setName("Hatice Nur Coşkun");
-
         boolean persisted = persistInATransaction(customer);
         assertTrue(persisted);
     }

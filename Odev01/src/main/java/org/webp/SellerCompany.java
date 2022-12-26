@@ -4,36 +4,36 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-@Table(name = "Writer")
+@Table(name = "sellerCompany")
 @Entity
-public class Writer {
+public class SellerCompany {
 
     @Id
     @NotNull
-    private Long writerId;
+    private Long sellerCompanyId;
 
-    @Column(name = "writer_name")
-    private String writerName;
+    @Column(name = "sellerCompany_name")
+    private String sellerCompanyName;
 
     @Column(name = "customer_id")
     private Long customerId;
 
-    public Writer(){}
+    public SellerCompany(){}
 
     public Long getId() {
-        return writerId;
+        return sellerCompanyId;
     }
 
-    public void setId(Long writerId) {
-        this.writerId = writerId;
+    public void setId(Long sellerCompanyId) {
+        this.sellerCompanyId = sellerCompanyId;
     }
 
     public String getName() {
-        return writerName;
+        return sellerCompanyName;
     }
 
-    public void setName(String writerName) {
-        this.writerName = writerName;
+    public void setName(String sellerCompanyName) {
+        this.sellerCompanyName = sellerCompanyName;
     }
 
     public Long getCustomerId() {
@@ -44,4 +44,3 @@ public class Writer {
         this.customerId = customerId;
     }
 }
-
